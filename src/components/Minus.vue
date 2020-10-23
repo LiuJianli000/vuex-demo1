@@ -36,8 +36,10 @@ export default {
 
 <style scoped>
 .mis {
+  display: inline-block;
   border: 1px solid red;
   padding: 10px;
-  margin-top: 10px;
+  width: 400px;
+  margin-left: 10px;
 }
 </style>

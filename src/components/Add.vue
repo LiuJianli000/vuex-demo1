@@ -38,7 +38,9 @@ export default {
 
 <style scoped>
 .add {
+  display: inline-block;
   border: 1px solid red;
   padding: 10px;
+  width: 400px;
 }
 </style>

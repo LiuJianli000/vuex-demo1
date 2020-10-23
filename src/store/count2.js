@@ -1,18 +1,11 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import count1 from './count1'
-import count2 from './count2'
-
-Vue.use(Vuex)
-
-export default new Vuex.Store({
-  state: {
-    count: 0
-  },
-  // 对 state 中的数据起到包装作用
+export default {
+  namespaced: true,
+  state: () => ({
+    count: 1
+  }),
   getters: {
     showCount (state) {
-      return `当前最新的数量是(store/index): ${state.count}`
+      return `当前最新的数量是(store/count2): ${state.count}`
     }
   },
   // 调用异步代码
@@ -38,9 +31,5 @@ export default new Vuex.Store({
     minus (state, num) {
       state.count -= num
     }
-  },
-  modules: {
-    count1,
-    count2
   }
-})
+}
